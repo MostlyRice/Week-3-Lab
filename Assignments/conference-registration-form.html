@@ -1,11 +1,90 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Student Feedback</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="feedback-styles.css" type="text/css">
+
 </head>
-<body>
-    
+
+<body class="m-3">
+
+<div class="jumbotron">
+  <h1>Conference Registration Form</h1>
+</div>
+
+<div class="row">  <!-- start of row -->
+
+  <div class="col-md-5">  <!-- start of first column -->
+    <div class="ml-5">
+        <p>Please use this form to register for the conference. Thank you.</p>
+    </div>
+  </div>  <!-- end of first column -->
+
+  <div class="col-md-7">  <!-- start of first column -->
+    <form class="ml-5 mr-5">
+      <label for="name">Name</label> <input id="name" class="form-control" maxlength="70"  type="text" 
+      required>
+      <br>
+      <label for="Password">Password</label> <input id="password" class="form-control"  type="password" required>
+      <br>
+      <label for="email">Email</label> <input id="email" class="form-control"  type="email" required>
+      <br>
+      
+      <p class="form-text">T-shirt Size?</p>
+      <select class="form-control">
+        <option>Small</option>
+        <option>Medium</option>
+        <option>Large</option>
+      </select><br>
+
+      <div id="date-of-birth" class="md-form md-outline input-with-post-icon datepicker" inline="true">
+        <label for="date-of-birth">Date of Birth</label>
+        <input placeholder="Select date" type="date" id="date-of-birth" class="form-control"
+        required>
+        <br>
+
+        <p class="form-text">Recieve email updates?</p>
+        <div class="form-check">
+          <input name="email-updates" id="yes" class="form-check-input" type="radio" checked required>
+          <label for="yes"  class="form-check-label">Yes</label>
+        </div>
+        <div class="form-check">
+          <input name="email-updates" id="no" class="form-check-input" type="radio" required>
+          <label for="no"  class="form-check-label" >No</label>
+        </div>
+        <i class="fas fa-calendar input-prefix"></i>
+      </div><br>
+
+      <p class="form-text">Choose your conference session</p>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+        <label class="form-check-label" for="flexCheckDefault">Morning</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+        <label class="form-check-label" for="flexCheckDefault">Afternoon</label>
+      </div><br>
+
+      <label for="special-requests">Special Requests</label> <br>
+      <textarea id="special-requests" class="form-control"
+      rows="7" cols="70"></textarea><br>
+
+      <div>
+        <input class="btn btn-primary mt-2" type="submit">
+      </div>
+    </form>
+
+  </div>  <!-- end of second column -->
+
+</div>  <!-- end of row -->
+
+
 </body>
 </html>
