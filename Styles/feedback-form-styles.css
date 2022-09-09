@@ -1,0 +1,21 @@
+.jumbotron {
+    font-size:18px;
+    color:#fff;
+    background:#55acee;
+    text-align:center;
+}
+
+#form.active {
+    transition:all 400ms linear 550ms;
+    opacity:1;
+    width:350px;
+    height:250px;
+    border-radius:5px;    
+  }
+ 
+.submit-button {
+    outline:none;
+    border:none;
+    color:#fff;
+    background:tomato;
+}  
