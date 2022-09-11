@@ -1,11 +1,55 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+      <link rel="stylesheet" href="../Styles/favorite-program-styles.css">
+      <title>Document</title>
+   </head>
+   <body class="m-3">
+      <div class="jumbotron">
+         <h1>My favorite program: PrimeSolo_project
+         </h1>
+      </div>
+      <div class="row">
+         <!-- start of row -->
+         <div class="col-md-5">
+            <!-- start of first column -->
+            <div class="ml-5">
+               <p>This was my first full-stack web application that I wrote for Prime Digital Academy</p>
+               <p>Magic Deckbox is a full-stack web application to keep track of your magic collection. It provides an inventory of your Magic card collection by adding, deleting, and editing your inventory using the Magic The Gathering API and the PostgreSQL database. There will be multiple views within the app to include: Home, search, trades, wishlist, deckbox, and an info page.
+               </p>
+               <p>
+                This code sample on the right is a Get function that I wrote for a trafelist route that I used for this application.
+             </p>
+               <a href="https://github.com/MostlyRice/PrimeSolo_project">This is the github repo to the project</a>
+            </div>
+         </div>
+         <!-- end of first column -->
+         <div class="col-md-7">
+            <!-- start of first column -->
+            <pre>
+            <code>
+                // START GET ROUTE FOR TRADELIST
+                router.get('/tradelist/:id', function(request, response){
+                  const user_id = request.params.id;
+                  const query = 'SELECT * FROM user_cards JOIN cards ON cards.id = user_cards.card_id WHERE tradelist=true AND user_cards.user_id =$1 ORDER BY type;';
+                  pool.query(query, [user_id])
+                  .then(function(result){
+                    response.send(result.rows);
+                  
+                  }).catch(function(error){
+                    response.sendStatus(500);
+                  });
+                });
+                // END GET ROUTE FOR TRADELIST
+            </code>
+        </pre>
+         </div>
+         <!-- end of second column -->
+      </div>
+      <!-- end of row -->
+   </body>
 </html>
